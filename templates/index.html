@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GnanaPreetham Reddy | Portfolio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="{{ url_for('static', filename='profile_circle.png') }}" alt="Profile Picture" class="profile-pic" />
+      <h1>Somireddy <span>GnanaPreetham</span> Reddy</h1>
+      <p>Full-Stack Developer | AI Enthusiast</p>
+      <p>Email: preethamreddy2808@gmail.com | 📞 +91 9391517701 | DOB: 28 Aug 2004</p>
+    </header>
+
+    <section>
+      <h2>Skills</h2>
+      <h3>Programming</h3>
+      <ul>
+        <li><strong>Advanced:</strong> Python, Java</li>
+        <li><strong>Intermediate:</strong> HTML, CSS</li>
+        <li><strong>Novice:</strong> JS</li>
+      </ul>
+      <h3>Tools & Tech</h3>
+      <p>GIT, Linux, Windows, PowerBI, SQL, MongoDB, Azure, AWS</p>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <div>
+        <h3>STACKNETS – Remote Intern (May 2025 – Present)</h3>
+        <p>Network Automation | Full-Stack</p>
+        <ul>
+          <li>Developed Python-based backend for automated network management</li>
+          <li>Built Flask chatbot using Netmiko for real-time control</li>
+        </ul>
+      </div>
+      <div>
+        <h3>WiseWork – Software Engineer Trainee (Oct 2024 – Apr 2025)</h3>
+        <p>ML | Full-Stack</p>
+        <ul>
+          <li>Healthcare chatbot using FastAPI</li>
+          <li>Integrated AI-based NLP for queries</li>
+        </ul>
+      </div>
+      <div>
+        <h3>IIEC – Portfolio Analyst (Jul 2024 – Present)</h3>
+        <ul>
+          <li>Used PowerBI/Tableau for dashboards</li>
+          <li>Reduced reporting time by 30%</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div>
+        <h3>MEDIBOT</h3>
+        <p>Python | Flask | NLP | WebAssembly</p>
+        <ul>
+          <li>Medical chatbot using NLP & Flask</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Google Stock Price Prediction</h3>
+        <p>Tensorslow | Deep Learning</p>
+        <ul>
+          <li>LSTM model for stock forecasting</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Certifications</h2>
+      <ul>
+        <li>Microsoft Azure Fundamentals (Microsoft)</li>
+        <li>AWS Cloud Foundations (AWS Academy)</li>
+        <li>Machine Learning Specialization (Coursera)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <ul>
+        <li>B.Tech, CSE – VIT-AP University (2022–26) – CGPA: 8.3</li>
+        <li>Intermediate – Narayana Jr. College – 95.4%</li>
+        <li>TS Board – Narayana High School – CGPA: 10.0</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Languages Known</h2>
+      <p>English, Hindi, Telugu</p>
+    </section>
+
+    <section>
+      <h2>Extra Curriculars</h2>
+      <p>Club Advisor – ML Club, VIT-AP</p>
+      <p>Organized ML events with 1000+ participants annually</p>
+    </section>
+
+    <section>
+      <h2>Links</h2>
+      <ul>
+        <li><a href="https://github.com/Preetham2808">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/Preethamreddy">LinkedIn</a></li>
+        <li><a href="https://leetcode.com/preethamreddy281">LeetCode</a></li>
+        <li><a href="https://hackerrank.com/Preetham2004">HackerRank</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <section>
+    <h2>Contact Me</h2>
+    <form action="/submit" method="POST">
+      <label>Name:</label><br />
+      <input type="text" name="name" required /><br />
+      <label>Email:</label><br />
+      <input type="email" name="email" required /><br />
+      <label>Message:</label><br />
+      <textarea name="message" rows="5" required></textarea><br />
+      <button type="submit">Send</button>
+    </form>
+  </section>
+</body>
+</html>
