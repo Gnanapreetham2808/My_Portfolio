@@ -4,125 +4,337 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GnanaPreetham Reddy | Portfolio</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #121212;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    .light-mode {
+      background-color: #f5f5f5;
+      color: #222;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      padding: 10px 15px;
+      background: #444;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: #222;
+      z-index: 999;
+      padding: 10px;
+    }
+
+    .navbar ul {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .navbar a:hover {
+      color: #00bcd4;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 60px;
+    }
+
+    .profile-pic {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .name-title {
+      flex: 1;
+    }
+
+    .name-title h1 {
+      font-size: 2em;
+      margin: 0;
+    }
+
+    .name-title span {
+      color: #00bcd4;
+    }
+
+    .title {
+      font-size: 1.2em;
+      color: #ccc;
+    }
+
+    section {
+      margin-top: 50px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #00bcd4;
+      padding-bottom: 5px;
+    }
+
+    ul, li {
+      margin: 5px 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, textarea {
+      background-color: #1e1e1e;
+      color: #fff;
+      padding: 12px;
+      font-size: 1em;
+      border-radius: 5px;
+      border: 1px solid #444;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #00bcd4;
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+    }
+
+    button[type="submit"] {
+      background: #00bcd4;
+      color: white;
+      padding: 10px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button[type="submit"]:hover {
+      background: #0097a7;
+    }
+
+    .fade-in-on-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .name-title {
+        text-align: center;
+      }
+    }
+
+    .resume-btn {
+      display: inline-block;
+      margin-bottom: 15px;
+      background: #00bcd4;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .resume-btn:hover {
+      background: #0097a7;
+    }
+  </style>
 </head>
 <body>
+
+  <button class="toggle-btn" onclick="toggleMode()">🌙 Toggle Mode</button>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#extras">More</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <div class="container">
-    <header>
-      <img src="{{ url_for('static', filename='profile_circle.png') }}" alt="Profile Picture" class="profile-pic" />
-      <h1>Somireddy <span>GnanaPreetham</span> Reddy</h1>
-      <p>Full-Stack Developer | AI Enthusiast</p>
-      <p>Email: preethamreddy2808@gmail.com | 📞 +91 9391517701 | DOB: 28 Aug 2004</p>
+    <!-- Hero Section -->
+    <header id="home" class="fade-in-on-scroll">
+      <img src="static/profile_circle.png" alt="Profile Picture" class="profile-pic" />
+      <div class="name-title">
+        <h1>Somireddy <span>GnanaPreetham</span> Reddy</h1>
+        <p class="title">Full-Stack Developer | AI & ML Enthusiast</p>
+        <p>📧 preethamreddy2808@gmail.com | 📞 +91 9391517701<br>
+           🎂 DOB: 28 Aug 2004 | 📍 India</p>
+      </div>
     </header>
 
-    <section>
+    <!-- Skills Section -->
+    <section id="skills" class="fade-in-on-scroll">
       <h2>Skills</h2>
-      <h3>Programming</h3>
       <ul>
-        <li><strong>Advanced:</strong> Python, Java</li>
-        <li><strong>Intermediate:</strong> HTML, CSS</li>
-        <li><strong>Novice:</strong> JS</li>
+        <li><strong>Languages:</strong> Python (Advanced), Java (Advanced), HTML/CSS (Intermediate), JS (Novice)</li>
+        <li><strong>Tools:</strong> Git, Linux, Windows, PowerBI, Tableau</li>
+        <li><strong>Technologies:</strong> SQL, MongoDB, Azure, AWS, Flask, FastAPI</li>
+        <li><strong>Other:</strong> Content Creation, Public Speaking, Exploring Tech, Event Management</li>
       </ul>
-      <h3>Tools & Tech</h3>
-      <p>GIT, Linux, Windows, PowerBI, SQL, MongoDB, Azure, AWS</p>
     </section>
 
-    <section>
+    <!-- Experience Section -->
+    <section id="experience" class="fade-in-on-scroll">
       <h2>Experience</h2>
-      <div>
-        <h3>STACKNETS – Remote Intern (May 2025 – Present)</h3>
-        <p>Network Automation | Full-Stack</p>
-        <ul>
-          <li>Developed Python-based backend for automated network management</li>
-          <li>Built Flask chatbot using Netmiko for real-time control</li>
-        </ul>
-      </div>
-      <div>
-        <h3>WiseWork – Software Engineer Trainee (Oct 2024 – Apr 2025)</h3>
-        <p>ML | Full-Stack</p>
-        <ul>
-          <li>Healthcare chatbot using FastAPI</li>
-          <li>Integrated AI-based NLP for queries</li>
-        </ul>
-      </div>
-      <div>
-        <h3>IIEC – Portfolio Analyst (Jul 2024 – Present)</h3>
-        <ul>
-          <li>Used PowerBI/Tableau for dashboards</li>
-          <li>Reduced reporting time by 30%</li>
-        </ul>
-      </div>
+      <h3>WiseWork (Oct 2024 – Apr 2025)</h3>
+      <ul>
+        <li>Developed medical chatbot using FastAPI + NLP</li>
+        <li>Designed secure REST APIs & followed Agile practices</li>
+      </ul>
+
+      <h3>IIEC Portfolio Analyst – VIT AP (Jul 2024 – Present)</h3>
+      <ul>
+        <li>Built dashboards using PowerBI & Tableau</li>
+        <li>Improved reporting speed by 30%</li>
+      </ul>
+
+      <h3>StackNets Remote Intern (May 2025 – Present)</h3>
+      <ul>
+        <li>Automated network switch management using Python + Flask + Netmiko</li>
+        <li>Chatbot with 15+ diagnostic commands via web UI</li>
+      </ul>
     </section>
 
-    <section>
+    <!-- Projects Section -->
+    <section id="projects" class="fade-in-on-scroll">
       <h2>Projects</h2>
-      <div>
-        <h3>MEDIBOT</h3>
-        <p>Python | Flask | NLP | WebAssembly</p>
-        <ul>
-          <li>Medical chatbot using NLP & Flask</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Google Stock Price Prediction</h3>
-        <p>Tensorslow | Deep Learning</p>
-        <ul>
-          <li>LSTM model for stock forecasting</li>
-        </ul>
-      </div>
+      <h3>Medibot</h3>
+      <p>Medical chatbot using Flask, NLP & Blazor WebAssembly</p>
+
+      <h3>Google Stock Price Prediction</h3>
+      <p>LSTM model using TensorFlow to forecast Google stock prices</p>
+
+      <h3>Network Automation Assistant</h3>
+      <p>Flask + Netmiko backend to automate network diagnostics & control</p>
     </section>
 
-    <section>
+    <!-- Certifications Section -->
+    <section id="certifications" class="fade-in-on-scroll">
       <h2>Certifications</h2>
       <ul>
-        <li>Microsoft Azure Fundamentals (Microsoft)</li>
-        <li>AWS Cloud Foundations (AWS Academy)</li>
-        <li>Machine Learning Specialization (Coursera)</li>
+        <li>Microsoft Azure Fundamentals – Microsoft</li>
+        <li>AWS Cloud Foundations – AWS Academy</li>
+        <li>Machine Learning Specialization – Coursera</li>
       </ul>
     </section>
 
-    <section>
+    <!-- Education Section -->
+    <section id="education" class="fade-in-on-scroll">
       <h2>Education</h2>
       <ul>
-        <li>B.Tech, CSE – VIT-AP University (2022–26) – CGPA: 8.3</li>
-        <li>Intermediate – Narayana Jr. College – 95.4%</li>
-        <li>TS Board – Narayana High School – CGPA: 10.0</li>
+        <li><strong>VIT AP University</strong> – B.Tech CSE (2022–2026) | CGPA: 8.3</li>
+        <li><strong>Narayana Junior College</strong> – MPC (2020–2022) | 95.4%</li>
+        <li><strong>Narayana High School</strong> – SSC (2019–2020) | CGPA: 10.0</li>
       </ul>
     </section>
 
-    <section>
-      <h2>Languages Known</h2>
-      <p>English, Hindi, Telugu</p>
-    </section>
-
-    <section>
-      <h2>Extra Curriculars</h2>
-      <p>Club Advisor – ML Club, VIT-AP</p>
-      <p>Organized ML events with 1000+ participants annually</p>
-    </section>
-
-    <section>
-      <h2>Links</h2>
+    <!-- Extras -->
+    <section id="extras" class="fade-in-on-scroll">
+      <h2>Extra Curricular</h2>
       <ul>
-        <li><a href="https://github.com/Preetham2808">GitHub</a></li>
-        <li><a href="https://linkedin.com/in/Preethamreddy">LinkedIn</a></li>
-        <li><a href="https://leetcode.com/preethamreddy281">LeetCode</a></li>
-        <li><a href="https://hackerrank.com/Preetham2004">HackerRank</a></li>
+        <li>Managing Director – ML Club, VIT-AP</li>
+        <li>Organized ML events with 1000+ participants</li>
+        <li>Club awarded Best Tech Club</li>
+      </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="fade-in-on-scroll">
+      <h2>Contact Me</h2>
+
+      <!-- Resume Button -->
+      <a href="static/GnanaPreetham_Resume.pdf" class="resume-btn" target="_blank">📄 View Resume</a>
+
+      <form action="/submit" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+
+      <br/>
+      <p>Social Links:</p>
+      <ul>
+        <li><a href="https://github.com/Gnanapreetham2808" target="_blank">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/somireddy-gnana-preetham-reddy-917ab024a/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://www.hackerrank.com/profile/preethamreddy281" target="_blank">HackerRank</a></li>
       </ul>
     </section>
   </div>
 
-  <section>
-    <h2>Contact Me</h2>
-    <form action="/submit" method="POST">
-      <label>Name:</label><br />
-      <input type="text" name="name" required /><br />
-      <label>Email:</label><br />
-      <input type="email" name="email" required /><br />
-      <label>Message:</label><br />
-      <textarea name="message" rows="5" required></textarea><br />
-      <button type="submit">Send</button>
-    </form>
-  </section>
+  <!-- JavaScript -->
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('light-mode');
+    }
+
+    const faders = document.querySelectorAll('.fade-in-on-scroll');
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('fade-in');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.1 });
+
+    faders.forEach(el => appearOnScroll.observe(el));
+  </script>
 </body>
 </html>
