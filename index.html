@@ -1,338 +1,439 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Somireddy GnanaPreetham Reddy | AI/ML Engineer & Backend Developer</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css"> <!-- ✅ Fixed path -->
 
-  <style>
-    .linkedin-contact {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 24px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      color: white;
-      background-color: #0077b5;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: 0.3s ease;
-    }
-    .linkedin-contact i {
-      margin-right: 8px;
-    }
-    .linkedin-contact:hover {
-      background-color: #005983;
-      transform: scale(1.03);
-    }
-    @media (max-width: 768px) {
-      .linkedin-contact {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 1000;
-        box-shadow: 0 5px 10px rgba(0, 119, 181, 0.3);
-      }
-    }
-  </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gnanapreetham Reddy | AI/ML & Backend Engineer</title>
+
+  <!-- Modern Tech Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
+
 <body>
-  <canvas id="particles"></canvas>
-  <nav class="navbar">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#skills">Skills</a></li>
+  <!-- Background Ambient Glows -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Floating Navigation -->
+  <nav class="floating-nav">
+    <ul class="nav-links">
+      <li><a href="#hero" class="active">Home</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#leadership">Leadership</a></li>
+      <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-  <div class="container">
-    <header id="home" class="fade-in-on-scroll">
-      <img src="static/profile_circle.png" alt="Profile Picture" class="profile-pic" /> <!-- ✅ Fixed path -->
-      <div class="name-title">
-        <h1>Somireddy <span class="animate-gradient">GnanaPreetham</span> Reddy</h1>
-        <p class="title">AI/ML Engineer & Backend Developer (FastAPI/Django)</p>
-        <p>📧 preethamreddy2808@gmail.com | 📞 +91 9391517701<br>
-           📍 Hyderabad, India</p>
-        <p>
-          Hands-on AI/ML and software engineering professional focused on deep learning models, intelligent systems,
-          and scalable backend solutions with FastAPI/Django. Strong at problem-solving, data-driven development,
-          and shipping reliable systems in Agile environments.
+
+  <main class="container">
+
+    <!-- === HERO SECTION === -->
+    <section id="hero" class="hero fade-in">
+      <div class="hero-content">
+        <div class="availability-badge">
+          <span class="pulse"></span>
+          Open to opportunities
+        </div>
+        <h1 class="title">
+          I build intelligent systems & <br>
+          <span>scalable backends</span>.
+        </h1>
+        <p class="subtitle">
+          Hi, I'm <strong>Somireddy GnanaPreetham Reddy</strong>. An AI/ML Engineer & Backend Developer focusing on deep
+          learning models, GenAI agents, and robust FastAPI/Django architectures.
         </p>
-      </div>
-    </header>
 
-    <section id="skills" class="fade-in-on-scroll">
-      <h2>Technical Skills</h2>
-      
-      <div class="skill-category">
-        <h4>Programming</h4>
-        <div class="skill-bar">
-          <div class="skill-name">Python</div>
-          <div class="skill-progress" data-width="95%"><div class="skill-fill" style="width: 95%;"></div></div>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">
+            Get in Touch <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="static/Resume_Preetham.pdf" target="_blank" class="btn btn-secondary">
+            <i class="fa-regular fa-file-pdf"></i> View Resume
+          </a>
         </div>
-        <div class="skill-bar">
-          <div class="skill-name">Java</div>
-          <div class="skill-progress" data-width="90%"><div class="skill-fill" style="width: 90%;"></div></div>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-name">SQL</div>
-          <div class="skill-progress" data-width="85%"><div class="skill-fill" style="width: 85%;"></div></div>
-        </div>
-      </div>
 
-      <div class="skill-category">
-        <h4>Frameworks & Libraries</h4>
-        <div class="skill-tags">
-          <span class="skill-tag">Django</span>
-          <span class="skill-tag">FastAPI</span>
-          <span class="skill-tag">TensorFlow</span>
-          <span class="skill-tag">Netmiko</span>
-          <span class="skill-tag">LangChain</span>
+        <div class="hero-socials">
+          <a href="https://github.com/Gnanapreetham2808" target="_blank" title="GitHub"><i
+              class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/somireddy-gnana-preetham-reddy-917ab024a/" target="_blank"
+            title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://leetcode.com/preethamreddy281" target="_blank" title="LeetCode"><i
+              class="fa-solid fa-code"></i></a>
+          <a href="https://www.hackerrank.com/profile/preethamreddy281" target="_blank" title="HackerRank"><i
+              class="fa-brands fa-hackerrank"></i></a>
         </div>
       </div>
-
-      <div class="skill-category">
-        <h4>AI/ML & Tools</h4>
-        <div class="skill-tags">
-          <span class="skill-tag">Transformers</span>
-          <span class="skill-tag">Generative AI</span>
-          <span class="skill-tag">Agentic AI</span>
-          <span class="skill-tag">RAG</span>
-          <span class="skill-tag">Git</span>
-          <span class="skill-tag">VS Code</span>
-          <span class="skill-tag">Power BI</span>
-          <span class="skill-tag">Tableau</span>
+      <div class="hero-image-wrapper">
+        <div class="profile-frame">
+          <img src="static/profile_circle.jpg?v=3" alt="Gnanapreetham Reddy" class="profile-img">
+          <div class="frame-border"></div>
         </div>
       </div>
     </section>
 
-    <section id="research" class="fade-in-on-scroll">
-      <h2>Research</h2>
-      <h3>Intelligent Precision Agriculture System using LoRa-based IoT and AI — In Progress</h3>
-      <p><strong>Technologies:</strong> ESP32, LoRa (SX1278), Firebase, Python, XGBoost</p>
-      <ul>
-        <li>Designing a scalable IoT system for real-time soil and environmental monitoring via ESP32 + LoRa.</li>
-        <li>Developing AI analytics with XGBoost to forecast irrigation needs, optimize water usage, and improve crop productivity.</li>
-      </ul>
-    </section>
 
-    <section id="experience" class="fade-in-on-scroll">
-      <h2>Experience</h2>
+    <!-- === EXPERIENCE SECTION === -->
+    <section id="experience" class="section fade-in">
+      <div class="section-header">
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="line"></div>
+      </div>
+
       <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>📍 Stacknets — Software Engineer Intern</h3>
-            <p class="timeline-date">Aug 2025 – Present | Remote, Eindhoven, NL</p>
-            <ul>
-              <li>Contributing to AI and automation R&amp;D, improving overall system performance by 15%.</li>
-              <li>Experimenting with LLMs and Hugging Face Transformers for intelligent backend components, improving response accuracy by 20%.</li>
-              <li>Building scalable Python backends with Netmiko and REST APIs for network-oriented data processing.</li>
-            </ul>
+        <!-- FlairX -->
+        <div class="timeline-item bento-card">
+          <div class="timeline-header">
+            <div>
+              <h3>Software Engineer Intern</h3>
+              <span class="company">FlairX</span>
+            </div>
+            <div class="timeline-meta">
+              <span class="date"><i class="fa-regular fa-calendar"></i> Nov 2025 – Present</span>
+              <span class="location"><i class="fa-solid fa-earth-americas"></i> Remote (SF, USA)</span>
+            </div>
+          </div>
+          <ul class="timeline-content">
+            <li>Designing client-specific APIs and webhooks for integrations like Brex, Tavus, and Calendly for an
+              Agentic AI productivity platform.</li>
+            <li>Built event-driven workflows utilizing async processing for automated payments and scheduling
+              functionality.</li>
+            <li>Implemented LLM agents with memory and tool use (email, calendar), enhancing task completion speed via
+              feedback loops.</li>
+            <li>Improved deployment speed and reliability through CI/CD pipelines (GitHub Actions) and containerized
+              endpoints.</li>
+          </ul>
+        </div>
+
+        <!-- Stacknets -->
+        <div class="timeline-item bento-card">
+          <div class="timeline-header">
+            <div>
+              <h3>Software Engineer Intern (Founding Team)</h3>
+              <span class="company">Stacknets</span>
+            </div>
+            <div class="timeline-meta">
+              <span class="date"><i class="fa-regular fa-calendar"></i> Jul 2025 – Nov 2025</span>
+              <span class="location"><i class="fa-solid fa-earth-europe"></i> Remote (Eindhoven, NL)</span>
+            </div>
+          </div>
+          <ul class="timeline-content">
+            <li>Designed initial system architecture for an NLP/LLM-powered network automation platform as a Founding
+              Engineer.</li>
+            <li>Built an intent-based Chatbot integrating Django, Nautobot, and Zabbix for real-time monitoring and
+              network operations (VLANs, ACLs).</li>
+            <li>Created secure infrastructure guardrails including RBAC, health gates, and automated rollbacks via
+              Slack/Teams approvals.</li>
+            <li>Developed Python pipelines using multi-vendor network integrations (NAPALM, Netmiko) with Celery async
+              job execution.</li>
+          </ul>
+        </div>
+
+        <!-- Wisework -->
+        <div class="timeline-item bento-card">
+          <div class="timeline-header">
+            <div>
+              <h3>Software Engineer Intern</h3>
+              <span class="company">Wisework</span>
+            </div>
+            <div class="timeline-meta">
+              <span class="date"><i class="fa-regular fa-calendar"></i> Oct 2024 – Apr 2025</span>
+              <span class="location"><i class="fa-solid fa-location-dot"></i> Remote (Bangalore, IN)</span>
+            </div>
+          </div>
+          <ul class="timeline-content">
+            <li>Tested production apps (HuePlay) to resolve 10+ usability issues, increasing overall UI responsiveness
+              by 20%.</li>
+            <li>Developed a specialized healthcare chatbot using FastAPI and integrated AI-driven NLP models, performing
+              extensive model evaluation.</li>
+            <li>Operated in strict Agile sprints, consistently reaching 100% completion metrics and boosting delivery
+              velocities.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- === PROJECTS & RESEARCH === -->
+    <section id="projects" class="section fade-in">
+      <div class="section-header">
+        <h2 class="section-title">Projects & Research</h2>
+        <div class="line"></div>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Project 1 -->
+        <div class="bento-card project-card featured">
+          <div class="project-top">
+            <i class="fa-solid fa-envelope-open-text project-icon"></i>
+            <div class="project-links">
+              <a href="#" class="icon-link"><i class="fa-brands fa-github"></i></a>
+              <a href="#" class="icon-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Prompt-Driven Email Productivity Agent</h3>
+          <p class="project-desc">AI-powered email system categorizing 100+ emails/day, extracting actions, and drafting
+            context-aware replies using GPT-4o-mini and dynamic prompt management.</p>
+          <div class="tech-stack">
+            <span>FastAPI</span>
+            <span>OpenAI API</span>
+            <span>Supabase</span>
+            <span>PostgreSQL</span>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>📍 Wisework — Software Engineer Intern</h3>
-            <p class="timeline-date">Oct 2024 – Apr 2025 | Remote</p>
-            <ul>
-              <li>Tested production apps (e.g., HuePlay), identifying 10+ usability issues and improving UI responsiveness by 20%.</li>
-              <li>Developed a healthcare chatbot with FastAPI and AI-driven NLP; performed model evaluation and optimization for deployment.</li>
-              <li>Collaborated in Agile sprints, completing 100% of tasks and boosting feature delivery speed by 30%.</li>
-            </ul>
+
+        <!-- Project 2 -->
+        <div class="bento-card project-card">
+          <div class="project-top">
+            <i class="fa-solid fa-shield-halved project-icon"></i>
+            <div class="project-links">
+              <a href="#" class="icon-link"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">EduNet Secure Learning Forum</h3>
+          <p class="project-desc">Student-teacher Q&A portal with Transformer-based NLP plagiarism detection (90%
+            accuracy) and AES encryption security.</p>
+          <div class="tech-stack">
+            <span>FastAPI</span>
+            <span>Firebase</span>
+            <span>Transformers</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="bento-card project-card">
+          <div class="project-top">
+            <i class="fa-solid fa-chart-line project-icon"></i>
+            <div class="project-links">
+              <a href="#" class="icon-link"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Google Stock Price Prediction</h3>
+          <p class="project-desc">LSTM neural network performing time-series forecasting with 85%+ accuracy tested on 5
+            years of daily market data.</p>
+          <div class="tech-stack">
+            <span>TensorFlow</span>
+            <span>LSTM</span>
+            <span>Deep Learning</span>
+          </div>
+        </div>
+
+        <!-- Research -->
+        <div class="bento-card project-card">
+          <div class="project-top">
+            <i class="fa-solid fa-seedling project-icon"></i>
+            <span class="badge-mini">In Progress</span>
+          </div>
+          <h3 class="project-title">Intelligent Precision Agriculture (Research)</h3>
+          <p class="project-desc">Scalable LoRa-based IoT architecture using ESP32 predicting irrigation and resource
+            optimization via XGBoost models.</p>
+          <div class="tech-stack">
+            <span>ESP32</span>
+            <span>LoRa</span>
+            <span>XGBoost</span>
+            <span>Python</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="fade-in-on-scroll">
-      <h2>Projects</h2>
-      <h3>🛡️ EduNet — Secure Learning Forum with AI Plagiarism Detection (Jul 2025)</h3>
-      <p><strong>Stack:</strong> FastAPI, Firebase, Transformers (Hugging Face)</p>
-      <ul>
-        <li>Built a secure student–teacher Q&amp;A portal with role-based access, serving 100+ users.</li>
-        <li>Integrated transformer-based NLP for plagiarism detection and moderation, achieving 90%+ accuracy.</li>
-        <li>Implemented AES encryption and activity logging; collaborated with a frontend teammate.</li>
-      </ul>
 
-      <h3>🩺 MediAssist — Medical Chatbot (Mar 2025)</h3>
-      <p><strong>Stack:</strong> FastAPI (Backend), NLP</p>
-      <ul>
-        <li>Developed backend to handle medical queries with low-latency responses.</li>
-        <li>Applied NLP techniques to interpret user inputs, achieving 90%+ intent understanding.</li>
-      </ul>
+    <!-- === SKILLS & MORE === -->
+    <section id="skills" class="section fade-in">
+      <div class="section-header">
+        <h2 class="section-title">Technical Expertise</h2>
+        <div class="line"></div>
+      </div>
 
-      <h3>📈 Google Stock Price Prediction with LSTM (Oct 2024)</h3>
-      <p><strong>Stack:</strong> TensorFlow, Deep Learning</p>
-      <ul>
-        <li>Trained and deployed LSTM model for Google stock forecasting with 85%+ accuracy on 5 years of daily data.</li>
-        <li>Used numerical modeling and optimization to improve prediction stability for decision support.</li>
-      </ul>
-      <div class="project-stats">
-        <span class="stat"><i class="fas fa-database"></i> 5 Years Data</span>
-        <span class="stat"><i class="fas fa-check-circle"></i> 85% Accuracy</span>
+      <div class="skills-grid">
+        <div class="bento-card skill-block">
+          <h3><i class="fa-solid fa-code"></i> Languages</h3>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">SQL</span>
+          </div>
+        </div>
+        <div class="bento-card skill-block">
+          <h3><i class="fa-solid fa-layer-group"></i> Frameworks</h3>
+          <div class="skill-tags">
+            <span class="tag">Django</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Express.js</span>
+          </div>
+        </div>
+        <div class="bento-card skill-block featured-skill">
+          <h3><i class="fa-solid fa-brain"></i> AI / Machine Learning</h3>
+          <div class="skill-tags">
+            <span class="tag">TensorFlow</span>
+            <span class="tag">Transformer Models</span>
+            <span class="tag">LangChain</span>
+            <span class="tag">Agentic AI</span>
+            <span class="tag">RAG / GenAI</span>
+            <span class="tag">Hugging Face</span>
+          </div>
+        </div>
+        <div class="bento-card skill-block">
+          <h3><i class="fa-solid fa-screwdriver-wrench"></i> Developer Tools</h3>
+          <div class="skill-tags">
+            <span class="tag">Git & GitHub</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Netmiko</span>
+            <span class="tag">CI/CD</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Tableau</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="certifications" class="fade-in-on-scroll">
-      <h2>Certifications</h2>
-      <ul>
-        <li>Microsoft Azure Fundamentals (AI-900)</li>
-        <li>AWS Cloud Foundations</li>
-        <li>Oracle Cloud Infrastructure 2025 Certified Generative AI Professional</li>
-      </ul>
-    </section>
+    <!-- === EDUCATION, CERTIFICATIONS & LEADERSHIP === -->
+    <section class="section fade-in">
+      <div class="multi-col-grid">
 
-    <section id="education" class="fade-in-on-scroll">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>VIT-AP University</strong> — B.Tech CSE (Sep 2022 – Apr 2026) | CGPA: 8.0/10</li>
-        <li><strong>TSBIE (12th)</strong> — 2022 | Percentage: 95.4%</li>
-      </ul>
-    </section>
+        <!-- Education -->
+        <div class="bento-card">
+          <h3 class="card-title"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+          <div class="item-list">
+            <div class="item">
+              <h4>B.Tech in Computer Science</h4>
+              <p class="sub">VIT-AP University | Sep 2022 – Apr 2026</p>
+              <p class="stat">CGPA: 8.0/10</p>
+            </div>
+            <div class="item">
+              <h4>Intermediate (12th Grade)</h4>
+              <p class="sub">TSBIE | Graduated 2022</p>
+              <p class="stat">Score: 95.4%</p>
+            </div>
+          </div>
+        </div>
 
-    <section id="leadership" class="fade-in-on-scroll">
-      <h2>Leadership & Achievements</h2>
-      <ul>
-        <li>Director &amp; Club Advisor — organized ML events with 5,000+ participants annually; led club to Best Technical Club Award at VIT-AP.</li>
-        <li>Organized TEDxVITAP, VITopia 2024 &amp; 2025 (18,000+ attendees), and VTAPP Tech Fest 2023 &amp; 2024 (10,000+ participants).</li>
-        <li>Top 6 finalist (4th place of 300+ teams) at Google Devs Sprint 2K25 Hackathon, hosted by Google Cloud.</li>
-      </ul>
-    </section>
+        <!-- Certifications -->
+        <div class="bento-card">
+          <h3 class="card-title"><i class="fa-solid fa-certificate"></i> Certifications</h3>
+          <div class="item-list">
+            <div class="item">
+              <h4>Oracle Cloud Infrastructure 2025</h4>
+              <p class="sub">Certified Generative AI Professional</p>
+            </div>
+            <div class="item">
+              <h4>Microsoft Azure Fundamentals</h4>
+              <p class="sub">(AI-900)</p>
+            </div>
+            <div class="item">
+              <h4>AWS Cloud Foundations</h4>
+            </div>
+          </div>
+        </div>
 
-    <section id="contact" class="fade-in-on-scroll">
-      <h2>Contact Me</h2>
-      <a href="static/Resume_Preetham.pdf" class="resume-btn" target="_blank">📄 View Resume</a>
-      <form id="contactForm">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-      <a href="https://www.linkedin.com/in/somireddy-gnana-preetham-reddy-917ab024a/"
-         class="linkedin-contact" target="_blank">
-         <i class="fab fa-linkedin"></i> Connect on LinkedIn
-      </a>
-      <br/>
-      <p>Social Links:</p>
-      <div class="social-links">
-        <a href="https://github.com/Gnanapreetham2808" target="_blank" class="social-icon" title="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/somireddy-gnana-preetham-reddy-917ab024a/" target="_blank" class="social-icon" title="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://www.hackerrank.com/profile/preethamreddy281" target="_blank" class="social-icon" title="HackerRank">
-          <i class="fab fa-hackerrank"></i>
-        </a>
-        <a href="https://leetcode.com/preethamreddy281" target="_blank" class="social-icon" title="LeetCode">
-          <i class="fas fa-code"></i>
-        </a>
-        <a href="mailto:preethamreddy2808@gmail.com" class="social-icon" title="Email">
-          <i class="fas fa-envelope"></i>
-        </a>
+        <!-- Leadership -->
+        <div class="bento-card span-full">
+          <h3 class="card-title"><i class="fa-solid fa-trophy"></i> Leadership & Achievements</h3>
+          <ul class="timeline-content">
+            <li><strong>Hackathon Success:</strong> Winner of InnovateX 2025 by Unstop; Top 6 Finalist at Google Devs
+              Sprint 2K25.</li>
+            <li><strong>Event Management:</strong> Organized TEDxVITAP, VITopia (18,000+ attendees), and VTAPP Tech Fest
+              (10,000+ participants).</li>
+            <li><strong>Club Director:</strong> Directed a Technical Club winning 'Best Technical Club' award, leading
+              ML/AI events for 5,000+ participants.</li>
+          </ul>
+        </div>
+
       </div>
     </section>
-  </div>
 
-  <button id="toTop" aria-label="Back to top" title="Back to top">▲</button>
+    <!-- === CONTACT === -->
+    <section id="contact" class="section fade-in">
+      <div class="contact-bento bento-card">
+        <div class="contact-info">
+          <h2>Let's build something <span class="gradient-text">amazing</span></h2>
+          <p>I am currently open for full-time roles and freelance opportunities. Feel free to drop a message regarding
+            networking, AI consulting, or engineering roles.</p>
+
+          <div class="contact-methods">
+            <a href="mailto:preethamreddy2808@gmail.com" class="method">
+              <i class="fa-solid fa-envelope"></i> preethamreddy2808@gmail.com
+            </a>
+            <a href="tel:+919391517701" class="method">
+              <i class="fa-solid fa-phone"></i> +91 9391517701
+            </a>
+            <a href="https://www.linkedin.com/in/somireddy-gnana-preetham-reddy-917ab024a/" class="method"
+              target="_blank">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn Profile
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="input-group">
+            <input type="text" placeholder="Your Name" required>
+          </div>
+          <div class="input-group">
+            <input type="email" placeholder="Your Email" required>
+          </div>
+          <div class="input-group">
+            <textarea rows="4" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-full">Send Message <i
+              class="fa-regular fa-paper-plane"></i></button>
+        </form>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; 2026 Somireddy GnanaPreetham Reddy. All rights reserved.</p>
+      </footer>
+    </section>
+
+  </main>
 
   <script>
-    function toggleMode() {
-      // Removed: No longer toggling light mode
-    }
-
-    const faders = document.querySelectorAll('.fade-in-on-scroll');
-    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    // Smooth reveal animation using IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('fade-in');
-        observer.unobserve(entry.target);
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
       });
     }, { threshold: 0.1 });
 
-    faders.forEach(el => appearOnScroll.observe(el));
+    document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
 
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Thank you for your message! (Form submission is disabled on static site.)');
-      this.reset();
-    });
-
-    // Back-to-top button
-    const toTopBtn = document.getElementById('toTop');
+    // Active nav link highlight
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        toTopBtn.classList.add('show');
-      } else {
-        toTopBtn.classList.remove('show');
-      }
-    });
-    toTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    // Particle animation
-    const canvas = document.getElementById('particles');
-    const ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    const particles = [];
-    const particleCount = 50;
-
-    class Particle {
-      constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 1;
-        this.speedX = Math.random() * 0.5 - 0.25;
-        this.speedY = Math.random() * 0.5 - 0.25;
-      }
-      update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-        if (this.x > canvas.width) this.x = 0;
-        if (this.x < 0) this.x = canvas.width;
-        if (this.y > canvas.height) this.y = 0;
-        if (this.y < 0) this.y = canvas.height;
-      }
-      draw() {
-        ctx.fillStyle = 'rgba(61, 225, 255, 0.5)';
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-      }
-    }
-
-    for (let i = 0; i < particleCount; i++) {
-      particles.push(new Particle());
-    }
-
-    function animateParticles() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach(particle => {
-        particle.update();
-        particle.draw();
+      let current = '';
+      document.querySelectorAll('section').forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 150) {
+          current = section.getAttribute('id');
+        }
       });
-      requestAnimationFrame(animateParticles);
-    }
 
-    animateParticles();
+      document.querySelectorAll('.nav-links a').forEach(a => {
+        a.classList.remove('active');
+        if (a.getAttribute('href').substring(1) === current) {
+          a.classList.add('active');
+        }
+      });
+    });
 
-    window.addEventListener('resize', () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+    // Contact form
+    document.getElementById('contactForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Form submission is configured for a static page. Thanks for your message!');
     });
   </script>
 </body>
+
 </html>
