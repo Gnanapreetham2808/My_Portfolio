@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 
 <body>
@@ -178,8 +178,10 @@
           <div class="project-top">
             <i class="fa-solid fa-envelope-open-text project-icon"></i>
             <div class="project-links">
-              <a href="#" class="icon-link"><i class="fa-brands fa-github"></i></a>
-              <a href="#" class="icon-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="https://github.com/Gnanapreetham2808/Prompt-Driven-Email-Productivity-Agent" target="_blank"
+                class="icon-link tooltip-anchor" data-tooltip="View Repo"><i class="fa-brands fa-github"></i></a>
+              <a href="https://prompt-agent-demo.onrender.com" target="_blank" class="icon-link tooltip-anchor"
+                data-tooltip="View Live"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
           </div>
           <h3 class="project-title">Prompt-Driven Email Productivity Agent</h3>
@@ -198,7 +200,8 @@
           <div class="project-top">
             <i class="fa-solid fa-shield-halved project-icon"></i>
             <div class="project-links">
-              <a href="#" class="icon-link"><i class="fa-brands fa-github"></i></a>
+              <a href="https://github.com/Gnanapreetham2808/EduNet" target="_blank" class="icon-link tooltip-anchor"
+                data-tooltip="View Repo"><i class="fa-brands fa-github"></i></a>
             </div>
           </div>
           <h3 class="project-title">EduNet Secure Learning Forum</h3>
@@ -216,7 +219,8 @@
           <div class="project-top">
             <i class="fa-solid fa-chart-line project-icon"></i>
             <div class="project-links">
-              <a href="#" class="icon-link"><i class="fa-brands fa-github"></i></a>
+              <a href="https://github.com/Gnanapreetham2808/Google-Stock-Price-Prediction" target="_blank"
+                class="icon-link tooltip-anchor" data-tooltip="View Repo"><i class="fa-brands fa-github"></i></a>
             </div>
           </div>
           <h3 class="project-title">Google Stock Price Prediction</h3>
@@ -258,7 +262,7 @@
 
       <div class="skills-grid">
         <div class="bento-card skill-block">
-          <h3><i class="fa-solid fa-code"></i> Languages</h3>
+          <h3><i class="fa-solid fa-code floating-icon"></i> Languages</h3>
           <div class="skill-tags">
             <span class="tag">Python</span>
             <span class="tag">JavaScript</span>
@@ -267,7 +271,7 @@
           </div>
         </div>
         <div class="bento-card skill-block">
-          <h3><i class="fa-solid fa-layer-group"></i> Frameworks</h3>
+          <h3><i class="fa-solid fa-layer-group floating-icon"></i> Frameworks</h3>
           <div class="skill-tags">
             <span class="tag">Django</span>
             <span class="tag">FastAPI</span>
@@ -275,7 +279,7 @@
           </div>
         </div>
         <div class="bento-card skill-block featured-skill">
-          <h3><i class="fa-solid fa-brain"></i> AI / Machine Learning</h3>
+          <h3><i class="fa-solid fa-brain floating-icon"></i> AI / Machine Learning</h3>
           <div class="skill-tags">
             <span class="tag">TensorFlow</span>
             <span class="tag">Transformer Models</span>
@@ -286,7 +290,7 @@
           </div>
         </div>
         <div class="bento-card skill-block">
-          <h3><i class="fa-solid fa-screwdriver-wrench"></i> Developer Tools</h3>
+          <h3><i class="fa-solid fa-screwdriver-wrench floating-icon"></i> Developer Tools</h3>
           <div class="skill-tags">
             <span class="tag">Git & GitHub</span>
             <span class="tag">Docker</span>
@@ -432,6 +436,17 @@
     document.getElementById('contactForm')?.addEventListener('submit', (e) => {
       e.preventDefault();
       alert('Form submission is configured for a static page. Thanks for your message!');
+    });
+
+    // Spotlight Hover Effect for Bento Cards
+    document.querySelectorAll('.bento-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+      });
     });
   </script>
 </body>

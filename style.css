@@ -58,6 +58,25 @@ body {
   position: relative;
 }
 
+/* --- Custom Cyberpunk Scrollbar --- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 0, 127, 0.4);
+  border-radius: 10px;
+  border: 2px solid var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
 /* Background Noise Gradient Effect */
 body::before {
   content: "";
@@ -534,10 +553,37 @@ h4 {
   color: var(--text-muted);
   transition: var(--transition);
   font-size: 1.2rem;
+  position: relative;
 }
 
 .icon-link:hover {
   color: var(--text-main);
+}
+
+/* Tooltip implementation */
+.tooltip-anchor::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: var(--bg-color);
+  color: var(--accent-secondary);
+  border: 1px solid var(--accent-secondary);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-family: var(--font-heading);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+}
+
+.tooltip-anchor:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 .badge-mini {
@@ -592,6 +638,29 @@ h4 {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.floating-icon {
+  animation: floatIcon 3s ease-in-out infinite;
+  color: var(--accent-secondary);
+}
+
+.featured-skill .floating-icon {
+  color: var(--accent-tertiary);
+}
+
+@keyframes floatIcon {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .skill-tags {
